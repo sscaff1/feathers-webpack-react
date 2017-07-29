@@ -3,8 +3,8 @@ const path = require('path');
 
 module.exports = {
   entry: [
+    'react-hot-loader/patch',
     'webpack-hot-middleware/client?http://localhost:3030/',
-    'webpack/hot/only-dev-server',
     './app/index.js',
   ],
   output: {
@@ -18,11 +18,12 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_module/,
         use: [
-          { loader: 'react-hot-loader' },
+          { loader: 'react-hot-loader/webpack' },
           {
             loader: 'babel-loader',
             options: {
               presets: ['es2015', 'react', 'stage-2'],
+              plugins: ['react-hot-loader/babel'],
             },
           },
         ],
