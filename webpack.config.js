@@ -12,10 +12,6 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js',
   },
-  devServer: {
-    contentBase: path.resolve(__dirname, 'public'),
-    inline: true,
-  },
   module: {
     rules: [
       {
@@ -34,6 +30,7 @@ module.exports = {
     ],
   },
   resolve: {
+    modules: ['node_modules', path.resolve(__dirname, 'app')],
     extensions: ['.js', '.jsx'],
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
