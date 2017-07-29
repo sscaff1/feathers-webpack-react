@@ -3,8 +3,8 @@ const path = require('path');
 
 module.exports = {
   entry: [
-    'webpack-hot-middleware/client?http://localhost:3030/', // new
-    'webpack/hot/only-dev-server', // new
+    'webpack-hot-middleware/client?http://localhost:3030/',
+    'webpack/hot/only-dev-server',
     './app/index.js',
   ],
   output: {
