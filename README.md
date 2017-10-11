@@ -5,4 +5,6 @@ This is a simple boilerplate to help you get started with Feathers Webpack and R
 npm start
 ```
 
+The application will be served at ```http://localhost:3030```.
+
 Contributions and/or questions are always welcome.
